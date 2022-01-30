@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "4fdf081c-bc46-4811-9749-6cfabd3a87c7",
+		"name": "backendChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"PruebaNombre2\",\r\n  \"lastName\": \"Apellido\",\r\n  \"phone\": \"+34672690444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user contacts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"contactName\":\"pepito grillo 1\",\r\n        \"phone\":\"999999932\"\r\n    },\r\n    {\r\n        \"contactName\":\"fulano 1\",\r\n        \"phone\":\"999999999\"\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/contacts?userid=61f65ec28916661bb543648e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "61f65ec28916661bb543648e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get common contacts of users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/contacts?userid=61f65e9e8916661bb543648b&userid=61f65ec28916661bb543648e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "61f65e9e8916661bb543648b"
+						},
+						{
+							"key": "userid",
+							"value": "61f65ec28916661bb543648e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all contacts of user given",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/contacts?userid=61f65e9e8916661bb543648b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "61f65e9e8916661bb543648b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
