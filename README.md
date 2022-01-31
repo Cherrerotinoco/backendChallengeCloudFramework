@@ -35,7 +35,7 @@ Once the container is running in localhost:3000 you can start making request to 
 
 ## REST API
 
-You can use this [postman collection](/backendChallenge.postman_collection) if you want.
+You can use this [postman collection](/backendChallenge.postman_collection.json) if you want.
 
 - **To create an user: “/api/users”** (POST)
     
