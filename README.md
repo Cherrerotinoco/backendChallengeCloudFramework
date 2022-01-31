@@ -22,13 +22,13 @@ For this case we found a solution with 2 endpoints, *"/users"* and *"/users/cont
 First, build the docker image:
 
 ```bash
-docker build . -t nextjs-docker
+docker-compose build
 ```
 
-Then run the container:
+Then run the cluster:
 
 ```bash
- docker run -p 3000:3000 nextjs-docker
+ docker-compose up
 ```
 
 Once the container is running in localhost:3000 you can start making request to the API.

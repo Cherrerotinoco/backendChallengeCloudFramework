@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    mongodburl: 'mongodb://localhost:27017'
+    mongodburl: "mongodb://mongo:27017/mongo"
   }
 }
