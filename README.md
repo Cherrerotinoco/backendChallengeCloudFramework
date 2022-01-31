@@ -31,7 +31,7 @@ Then run the cluster:
  docker-compose up
 ```
 
-Once the container is running in localhost:3000 you can start making request to the API.
+Once the container is running in localhost:3000 you can start making requests to the API.
 
 ## REST API
 
